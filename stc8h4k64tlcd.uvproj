@@ -324,7 +324,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\APP;.\DRIVER;.\STC8H_LIB</IncludePath>
+              <IncludePath>.\APP;.\DRIVER;.\STC8H_LIB;.\LIB</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -390,62 +390,48 @@
         </Group>
         <Group>
           <GroupName>DRIVER</GroupName>
+          <Files>
+            <File>
+              <FileName>74hc595.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DRIVER\74hc595.c</FilePath>
+            </File>
+            <File>
+              <FileName>DigitalTube.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DRIVER\DigitalTube.c</FilePath>
+            </File>
+            <File>
+              <FileName>Key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DRIVER\Key.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>STC8H_LIB</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>0</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>2</IncludeInBuild>
-              <AlwaysBuild>2</AlwaysBuild>
-              <GenerateAssemblyFile>2</GenerateAssemblyFile>
-              <AssembleAssemblyFile>2</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>1</ComprImg>
-              <BankNo>65535</BankNo>
-            </CommonProperty>
-            <Group51>
-              <C51>
-                <RegisterColoring>2</RegisterColoring>
-                <VariablesInOrder>2</VariablesInOrder>
-                <IntegerPromotion>2</IntegerPromotion>
-                <uAregs>2</uAregs>
-                <UseInterruptVector>2</UseInterruptVector>
-                <Fuzzy>8</Fuzzy>
-                <Optimize>10</Optimize>
-                <WarningLevel>3</WarningLevel>
-                <SizeSpeed>2</SizeSpeed>
-                <ObjectExtend>2</ObjectExtend>
-                <ACallAJmp>2</ACallAJmp>
-                <InterruptVectorAddress>0</InterruptVectorAddress>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath>.\APP;.\DRIVER;.\STC8H_LIB</IncludePath>
-                </VariousControls>
-              </C51>
-              <Ax51>
-                <UseMpl>2</UseMpl>
-                <UseStandard>2</UseStandard>
-                <UseCase>2</UseCase>
-                <UseMod51>2</UseMod51>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Ax51>
-            </Group51>
-          </GroupOption>
+          <Files>
+            <File>
+              <FileName>STC8G_H_GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_Delay.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LIB</GroupName>
+          <Files>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\GPIO.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
