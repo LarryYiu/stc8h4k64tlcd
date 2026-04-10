@@ -386,27 +386,30 @@
               <FileType>1</FileType>
               <FilePath>.\APP\main.c</FilePath>
             </File>
+            <File>
+              <FileName>UartISR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\UartISR.c</FilePath>
+            </File>
+            <File>
+              <FileName>AppFunctionSetup.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\AppFunctionSetup.c</FilePath>
+            </File>
+            <File>
+              <FileName>TimerISR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\TimerISR.c</FilePath>
+            </File>
+            <File>
+              <FileName>ExtISR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\ExtISR.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>DRIVER</GroupName>
-          <Files>
-            <File>
-              <FileName>74hc595.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DRIVER\74hc595.c</FilePath>
-            </File>
-            <File>
-              <FileName>DigitalTube.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DRIVER\DigitalTube.c</FilePath>
-            </File>
-            <File>
-              <FileName>Key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\DRIVER\Key.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>STC8H_LIB</GroupName>
@@ -417,9 +420,34 @@
               <FilePath>.\STC8H_LIB\STC8G_H_GPIO.c</FilePath>
             </File>
             <File>
-              <FileName>STC8G_H_Delay.c</FileName>
+              <FileName>STC8G_H_NVIC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\STC8H_LIB\STC8G_H_Delay.c</FilePath>
+              <FilePath>.\STC8H_LIB\STC8G_H_NVIC.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_Switch.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_Switch.h</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_Exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_Exti.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -430,6 +458,31 @@
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\LIB\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>Utility.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\Utility.c</FilePath>
+            </File>
+            <File>
+              <FileName>External.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\External.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\Timer.c</FilePath>
             </File>
           </Files>
         </Group>

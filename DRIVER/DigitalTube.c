@@ -8,9 +8,9 @@ u8 code DT_SEG_LOOKUP[15] = {DIGIT_0,  DIGIT_1, DIGIT_2, DIGIT_3, DIGIT_4,
 
 void DT_Init()
 {
-    GPIO_config(GPIO_P7, GPIO_Pin_6, GPIO_PullUp);
-    GPIO_config(GPIO_P7, GPIO_Pin_7, GPIO_PullUp);
-    GPIO_config(GPIO_P4, GPIO_Pin_1, GPIO_PullUp);
+    GPIO_Config(GPIO_P7, GPIO_Pin_6, GPIO_PullUp);
+    GPIO_Config(GPIO_P7, GPIO_Pin_7, GPIO_PullUp);
+    GPIO_Config(GPIO_P4, GPIO_Pin_1, GPIO_PullUp);
 }
 
 void DT_DisplaySingle(u8 seg, u8 tube)

@@ -8,3 +8,22 @@ float [-99999, 99999], up to 3 dp: Done
 Done
 ### opt: add key driver (busy waiting)
 Done
+
+## [08/04] Timer
+### add Timer wrapper
+Done
+
+## [09/04] UART/Counter
+### add UART config wrapper
+done
+### add counter wrapper
+done
+
+## [10/04] ADC
+### add ADC config wrapper
+done
+### add ADC example: moving average filter
+#### req: sorting algorithm -> Insertion Sort
+done
+#### req: MAF algorithm
+done
