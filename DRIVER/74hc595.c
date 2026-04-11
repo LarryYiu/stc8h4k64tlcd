@@ -1,4 +1,4 @@
-#include "74hc595.h"
+#include "74HC595.h"
 
 #include <STC8H.h>
 

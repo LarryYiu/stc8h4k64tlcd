@@ -402,14 +402,21 @@
               <FilePath>.\APP\TimerISR.c</FilePath>
             </File>
             <File>
-              <FileName>ExtISR.c</FileName>
+              <FileName>I2C_ISR.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\APP\ExtISR.c</FilePath>
+              <FilePath>.\APP\I2C_ISR.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>DRIVER</GroupName>
+          <Files>
+            <File>
+              <FileName>AT24C02.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\DRIVER\AT24C02.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>STC8H_LIB</GroupName>
@@ -435,19 +442,24 @@
               <FilePath>.\STC8H_LIB\STC8G_H_Switch.h</FilePath>
             </File>
             <File>
-              <FileName>STC8G_H_ADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\STC8H_LIB\STC8G_H_ADC.c</FilePath>
-            </File>
-            <File>
               <FileName>STC8G_H_Timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\STC8H_LIB\STC8G_H_Timer.c</FilePath>
             </File>
             <File>
-              <FileName>STC8G_H_Exti.c</FileName>
+              <FileName>STC8G_H_I2C.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\STC8H_LIB\STC8G_H_Exti.c</FilePath>
+              <FilePath>.\STC8H_LIB\STC8G_H_I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_Delay.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -465,6 +477,16 @@
               <FilePath>.\LIB\UART.c</FilePath>
             </File>
             <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\I2C.c</FilePath>
+            </File>
+            <File>
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\LIB\ADC.c</FilePath>
@@ -473,16 +495,6 @@
               <FileName>Utility.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\LIB\Utility.c</FilePath>
-            </File>
-            <File>
-              <FileName>External.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LIB\External.c</FilePath>
-            </File>
-            <File>
-              <FileName>Timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LIB\Timer.c</FilePath>
             </File>
           </Files>
         </Group>

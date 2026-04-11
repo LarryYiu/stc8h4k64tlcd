@@ -9,8 +9,6 @@ void App_Init()
                 UART2_SW_P46_P47);
     Timer_Config(Timer0, TIM_16BitAutoReload, TIM_CLOCK_1T, DISABLE, 1000UL,
                  ENABLE, 0, Priority_0);
-    Ext_Config(EXT_INT0, EXT_MODE_Fall, Priority_0);
-    Ext_Config(EXT_INT1, EXT_MODE_Fall, Priority_0);
     GPIO_Config(GPIO_P4, GPIO_Pin_6 | GPIO_Pin_7, GPIO_PullUp);
     GPIO_Config(GPIO_P3, GPIO_Pin_All, GPIO_PullUp);
     GPIO_Config(GPIO_P1, GPIO_Pin_0, GPIO_HighZ);

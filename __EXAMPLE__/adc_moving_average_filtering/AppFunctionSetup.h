@@ -9,7 +9,6 @@
 #include "GPIO.h"
 #include "STC8G_H_ADC.h"
 #include "STC8G_H_Delay.h"
-#include "STC8G_H_Exti.h"
 #include "STC8G_H_GPIO.h"
 #include "STC8G_H_NVIC.h"
 #include "STC8G_H_Switch.h"

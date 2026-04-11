@@ -10,7 +10,7 @@
 
 #include <STC8H.h>
 
-#include "74hc595.h"
+#include "74HC595.h"
 #include "Config.h"
 #include "GPIO.h"
 

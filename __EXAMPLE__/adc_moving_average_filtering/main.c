@@ -1,3 +1,9 @@
+/**
+ * @brief This is an example code for ADC moving average filtering. It collects
+ * the ADC values of channel 0, a potentiometer in this case, and calculates the
+ * moving average, with the maximum sample number defined by MAF_TOTAL_SAMPLE
+ * (50) and the number replacing MAF_MOVING_SAMPLE (log_2(50) ≈ 6).
+ */
 #include <stc8h.h>
 #include <string.h>
 
