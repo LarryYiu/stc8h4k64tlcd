@@ -3,20 +3,16 @@
 
 #include <stc8h.h>
 
-#include "ADC.h"
 #include "Config.h"
-#include "External.h"
 #include "GPIO.h"
-#include "I2C.h"
-#include "STC8G_H_ADC.h"
 #include "STC8G_H_Delay.h"
 #include "STC8G_H_GPIO.h"
-#include "STC8G_H_I2C.h"
 #include "STC8G_H_NVIC.h"
 #include "STC8G_H_Switch.h"
 #include "STC8G_H_Timer.h"
 #include "STC8G_H_UART.h"
 #include "Timer.h"
+#include "TouchKey.h"
 #include "UART.h"
 
 #define MAF_TOTAL_SAMPLE 50

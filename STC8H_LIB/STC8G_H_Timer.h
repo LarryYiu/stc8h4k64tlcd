@@ -147,4 +147,6 @@ typedef struct
 
 u8	Timer_Inilize(u8 TIM, TIM_InitTypeDef *TIMx);
 
+extern u32 xdata time0IntNum;
+
 #endif

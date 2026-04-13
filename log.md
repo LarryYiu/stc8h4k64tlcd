@@ -27,3 +27,15 @@ done
 done
 #### req: MAF algorithm
 done
+
+## [11/04] I2C & AT24C02
+### add I2C config wrapper and R/W wrapper for AT24C02
+done
+### add R/W example
+done
+
+## [13/04] Touch Key
+### add touch key driver
+### add RTC driver
+### refine adc example reliability: add checksum mech, add redundant data check to prevent duplicate data wrting to EEPROM
+

@@ -15,7 +15,17 @@
 #define __PIN_HC595_SI__ P41
 #endif
 
+/**
+ * @brief Send a byte to the 74HC595.
+ */
 void HC595_SendByte(u8 dat);
+
+/**
+ * @brief Latch the data from the shift register to the output pins of the
+ * 74HC595.
+ *
+ * RCK 1 -> 0 -> 1;
+ */
 void HC595_Output();
 
 #endif  // __74HC595_H__

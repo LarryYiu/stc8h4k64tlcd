@@ -4,6 +4,9 @@
 #include "Config.h"
 #include "STC8G_H_GPIO.h"
 
+extern u8 code GPIO_PIN_LOOKUP_TABLE[8];
+extern u8 code GPIO_GROUP_LOOKUP_TABLE[8];
+
 /**
  * @brief GPIO pin configuration function
  * @param pinGroup: GPIO pin group (e.g., P1x, P2x, etc.)

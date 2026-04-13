@@ -1,6 +1,15 @@
 #include "STC8G_H_Timer.h"
 
-void Timer0_ISR_Handler(void) interrupt TMR0_VECTOR {}
+u32 xdata time0IntNum = 0;
+
+void Timer0_ISR_Handler(void) interrupt TMR0_VECTOR
+{
+    time0IntNum++;
+    if (time0IntNum % 10 == 0)
+    {
+        TSCTRL = (1 << 7) | (1 << 6);
+    }
+}
 
 void Timer1_ISR_Handler(void) interrupt TMR1_VECTOR {}
 

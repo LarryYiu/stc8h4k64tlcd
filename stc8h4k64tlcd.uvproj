@@ -401,20 +401,15 @@
               <FileType>1</FileType>
               <FilePath>.\APP\TimerISR.c</FilePath>
             </File>
-            <File>
-              <FileName>I2C_ISR.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\APP\I2C_ISR.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>DRIVER</GroupName>
           <Files>
             <File>
-              <FileName>AT24C02.c</FileName>
+              <FileName>TouchKey.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\DRIVER\AT24C02.c</FilePath>
+              <FilePath>.\DRIVER\TouchKey.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -447,16 +442,6 @@
               <FilePath>.\STC8H_LIB\STC8G_H_Timer.c</FilePath>
             </File>
             <File>
-              <FileName>STC8G_H_I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\STC8H_LIB\STC8G_H_I2C.c</FilePath>
-            </File>
-            <File>
-              <FileName>STC8G_H_ADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\STC8H_LIB\STC8G_H_ADC.c</FilePath>
-            </File>
-            <File>
               <FileName>STC8G_H_Delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\STC8H_LIB\STC8G_H_Delay.c</FilePath>
@@ -480,16 +465,6 @@
               <FileName>Timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\LIB\Timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LIB\I2C.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LIB\ADC.c</FilePath>
             </File>
             <File>
               <FileName>Utility.c</FileName>
