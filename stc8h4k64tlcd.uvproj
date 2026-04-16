@@ -186,7 +186,7 @@
         </Utilities>
         <Target51>
           <Target51Misc>
-            <MemoryModel>0</MemoryModel>
+            <MemoryModel>2</MemoryModel>
             <RTOS>0</RTOS>
             <RomSize>2</RomSize>
             <DataHold>0</DataHold>
@@ -387,11 +387,6 @@
               <FilePath>.\APP\main.c</FilePath>
             </File>
             <File>
-              <FileName>UartISR.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\APP\UartISR.c</FilePath>
-            </File>
-            <File>
               <FileName>AppFunctionSetup.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\APP\AppFunctionSetup.c</FilePath>
@@ -407,9 +402,9 @@
           <GroupName>DRIVER</GroupName>
           <Files>
             <File>
-              <FileName>TouchKey.c</FileName>
+              <FileName>Key.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\DRIVER\TouchKey.c</FilePath>
+              <FilePath>.\DRIVER\Key.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -446,6 +441,16 @@
               <FileType>1</FileType>
               <FilePath>.\STC8H_LIB\STC8G_H_Delay.c</FilePath>
             </File>
+            <File>
+              <FileName>STC8H_RTC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8H_RTC.c</FilePath>
+            </File>
+            <File>
+              <FileName>STC8G_H_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STC8H_LIB\STC8G_H_ADC.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -470,6 +475,16 @@
               <FileName>Utility.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\LIB\Utility.c</FilePath>
+            </File>
+            <File>
+              <FileName>RTC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\RTC.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB\ADC.c</FilePath>
             </File>
           </Files>
         </Group>

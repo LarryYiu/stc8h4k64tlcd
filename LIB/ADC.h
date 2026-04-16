@@ -3,6 +3,7 @@
 
 #include "Config.h"
 #include "STC8G_H_ADC.h"
+#include "STC8G_H_GPIO.h"
 #include "STC8G_H_NVIC.h"
 #include "Utility.h"
 
@@ -27,7 +28,8 @@ void ADC_Config(u8 sampleDuty, bit csCtl, u8 csHold, u8 clkFreq,
 /**
  * @brief ADC average filter function, which will sort the data and drop the
  * specified number of the maximum and minimum data, then calculate the average
- * value of the remaining data and return it.
+ * value of the remaining data and return it. This function does not extend the
+ * register access.
  *
  * @param dat the data array to be processed
  * @param len the length of the data array
@@ -35,4 +37,10 @@ void ADC_Config(u8 sampleDuty, bit csCtl, u8 csHold, u8 clkFreq,
  * @return the average value of the remaining data after dropping the specified
  */
 float ADC_AverageFilter(float* dat, u8 len, u8 dropNum);
+
+/**
+ * @brief ADC common configuration function, which will configure the ADC with
+ * the default settings for this project.
+ */
+void ADC_Config_Common();
 #endif  // __ADC_H__

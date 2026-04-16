@@ -12,7 +12,8 @@
 #define I2C_WriteBytes(addr, dat, len) I2C_WriteNbyte(DEV_ADDR, addr, dat, len)
 
 /**
- * @brief Initializing I2C function, non software simulating
+ * @brief Initializing I2C function, non software simulating. This function does
+ * not extend the register access.
  *
  * @param i2cPins pin pair used by I2C, can be
  * I2C_P14_P15, I2C_P24_P25, I2C_P33_P32

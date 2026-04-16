@@ -2,30 +2,45 @@
 #define __UART_H__
 
 #include "Config.h"
+#include "GPIO.h"
+#include "STC8G_H_GPIO.h"
 #include "STC8G_H_NVIC.h"
 #include "STC8G_H_Switch.h"
 #include "STC8G_H_UART.h"
 
 /**
- * @brief  UART configuration function
+ * @brief  UART configuration function, this function does not extend the
+ * register access.
+ *
  * @param  uartPort: UART port number (UART1, UART2, UART3, UART4)
+ *
  * @param  baudrate: Desired baud rate (e.g., 9600, 115200)
+ *
  * @param  mode: UART mode (e.g., UART_8bit_BRTx)
+ *
  * @param  timerSelect: Timer selection for baud rate generation (0 for auto, or
  * specific timer), UART2 fixed on BRT_Timer2
- * BRT_Timer1
- * BRT_Timer2
- * BRT_Timer3
- * BRT_Timer4
+ * BRT_Timer1, BRT_Timer2, BRT_Timer3, BRT_Timer4
+ *
  * @param  rxEnable: Enable or disable UART reception (ENABLE or DISABLE)
+ *
  * @param  doubleBaudrate: Enable or disable double baud rate (ENABLE or
  * DISABLE)
+ *
  * @param  priority: NVIC interrupt priority (e.g., Priority_0, Priority_1).
  * Need <STC8G_H_NVIC.h>
+ *
  * @param  pinSwitch: Pin switch configuration for UART (e.g., UART1_SW_P30_P31,
  * or -1 for no switch) Need <STC8G_H_Switch.h>
  */
 void UART_Config(u8 uartPort, u32 baudrate, u8 mode, u8 timerSelect,
                  bit rxEnable, bit doubleBaudrate, u8 priority, int8 pinSwitch);
 
+/**
+ * @brief  Common UART configuration function for the application. Enables UART1
+ * and UART2 with predefined settings. Both on 115200 baudrate. UART2 mounted on
+ * printf. This function does not extend the register access, be should enbale
+ * it by P_SW2 |= 0x80 or EAXSFR() before calling.
+ */
+void UART_Config_Common();
 #endif  // __UART_H__

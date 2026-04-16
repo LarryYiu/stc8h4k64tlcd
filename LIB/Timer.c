@@ -21,7 +21,7 @@ void Timer_Config(u8 timer, u8 mode, u8 clkSource, bit clkOut, u32 msIntr,
      * for 1kHz interrupt, T = 1/1000s = 1ms,
      * InitialValue = 65536 - (Sysclk * T) = 65536 - (Sysclk / 1000)
      */
-    tim.TIM_Value = 65536UL - timerLoader;
+    tim.TIM_Value = 65536UL - (MAIN_Fosc / (unsigned long)timerLoader);
     tim.TIM_Run = run;
     if (prescaler)  // for timer 3/4, set prescaler value
     {
@@ -70,4 +70,10 @@ void Timer_Config(u8 timer, u8 mode, u8 clkSource, bit clkOut, u32 msIntr,
                 break;
         }
     }
+}
+
+void Timer_Config_t0_1ms()
+{
+    Timer_Config(Timer0, TIM_16BitAutoReload, TIM_CLOCK_1T, DISABLE, 1000UL,
+                 ENABLE, 0, Priority_0);
 }

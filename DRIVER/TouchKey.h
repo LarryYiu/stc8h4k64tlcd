@@ -10,9 +10,6 @@
 #include "STC8G_H_NVIC.h"
 #include "STC8G_H_Switch.h"
 
-extern u8 code TOUCH_KEY_GPIO_LOOKUP_TABLE[16][2];
-extern u16 code TOUCH_KEY_INITIAL_VAL_LOOKUP_TABLE[16];
-
 /**
  * MSB channel 15 ~ LSB channel 0, bit 0 ~ bit 15, 1 for enable, 0 for disable
  */
@@ -48,31 +45,12 @@ typedef struct
 } TouchKey_t;
 
 /**
- * @brief The scanning stops at the last TKx, where x is the bit counting from
- * the MSB of TK_CHANNEL_ENABLED, so we can use this variable to check if the
- * scanning is done in the interrupt handler.
- */
-extern u8 xdata keyNumMSB;
-
-/**
  * @brief touchKeyStatus is a 16-bit variable where each bit represents the
  * current status of a touch key (1 for pressed, 0 for not pressed).
  * MSB 15 ~ LSB 0 corresponds to TK15 ~ TK0. The status is updated in the
  * interrupt handler.
  */
-extern int16 xdata touchKeyStatus;
-
-/**
- * @brief TK_DAT_BUFF is an array that stores the raw data read from each touch
- * key channel during scanning. The index corresponds to the touch key channel
- * number (0-15). This data can be used for debugging, calibration, or
- * implementing advanced features like auto-calibration. The values are updated
- * in the interrupt handler when a scan is completed for each channel. Note that
- * the values in TK_DAT_BUFF are the raw readings and may need to be processed
- * (e.g., low-pass filtered) before being used for touch detection, depending on
- * the configuration.
- */
-extern u16 xdata TK_DAT_BUFF[16];
+extern u16 xdata touchKeyStatus;
 
 /**
  * @brief currTouchKey is a structure that can be used to store the current
@@ -116,5 +94,34 @@ void TouchKey_Config();
  * the latest status.
  */
 bit TouchKey_IsAnyPressed();
+
+/**
+ * @brief TouchKey_GetPressedKeys returns a 16-bit bitmask representing the
+ * pressed status of each touch key channel. Each bit corresponds to a touch key
+ * channel, where bit 0 corresponds to TK0 and bit 15 corresponds to TK15. A bit
+ * value of 1 indicates that the corresponding touch key is pressed, while a bit
+ * value of 0 indicates that it is not pressed.
+ */
+u16 TouchKey_GetPressedKeys();
+
+/**
+ * @brief Get the raw data value of a specific touch key channel. Call after
+ * TK_READ_DONE_FLAG is set to TRUE to get the latest data.
+ *
+ * @param channel The touch key channel number (0-15) to check.
+ * @return The raw data value of the specified touch key channel.
+
+ */
+u16 TouchKey_GetRawData(u8 channel);
+
+/**
+ * @brief TouchKey_IsPressed checks if a specific touch key channel is currently
+ * pressed. Call after TK_READ_DONE_FLAG is set to TRUE to get the latest
+ * status.
+ *
+ * @param channel The touch key channel number (0-15) to check.
+ * @return TRUE if the specified touch key channel is pressed, FALSE otherwise.
+ */
+u8 TouchKey_IsPressed(u8 channel);
 
 #endif  // __TOUCH_KEY_H__

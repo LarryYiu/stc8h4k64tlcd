@@ -36,6 +36,7 @@ done
 
 ## [13/04] Touch Key
 ### add touch key driver
+done
 ### add RTC driver
 ### refine adc example reliability: add checksum mech, add redundant data check to prevent duplicate data wrting to EEPROM
 

@@ -19,7 +19,7 @@ void ADC_Config(u8 sampleDuty, bit csCtl, u8 csHold, u8 clkFreq,
     }
     else
     {
-        NVIC_ADC_Init(ENABLE, priority);
+        NVIC_ADC_Init(ENABLE, priority > 3 ? 3 : priority);
     }
 }
 
@@ -42,3 +42,11 @@ float ADC_AverageFilter(float* dat, u8 len, u8 dropNum)
         return sum / (end - dropNum);
     }
 }
+
+void ADC_Config_Common()
+{
+    P1_MODE_IN_HIZ(GPIO_Pin_0);
+    ADC_Config(31, 0, 1, ADC_SPEED_2X16T, ADC_RIGHT_JUSTIFIED, ENABLE, -1);
+}
+
+void ADC_ISR_Handler(void) interrupt ADC_VECTOR { ADC_CONTR &= ~ADC_FLAG; }

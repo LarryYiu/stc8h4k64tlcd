@@ -5,43 +5,59 @@
 #include "Config.h"
 #include "STC8G_H_Delay.h"
 
+void onShortPress(u8 index)
+{
+    if (index == 0)
+    {
+        printf("Key1 Short Pressed, cnt: %bu\n", keys[0].pressCount);
+    }
+    else if (index == 1)
+    {
+        printf("Key2 Short Pressed, cnt: %bu\n", keys[1].pressCount);
+    }
+    else if (index == 2)
+    {
+        printf("Key3 Short Pressed, cnt: %bu\n", keys[2].pressCount);
+    }
+    else if (index == 3)
+    {
+        printf("Key4 Short Pressed, cnt: %bu\n", keys[3].pressCount);
+    }
+}
+
+void onLongPress(u8 index)
+{
+    if (index == 0)
+    {
+        printf("Key1 Long Pressed, cnt: %bu\n", keys[0].pressDuration);
+    }
+    else if (index == 1)
+    {
+        printf("Key2 Long Pressed, cnt: %bu\n", keys[1].pressDuration);
+    }
+    else if (index == 2)
+    {
+        printf("Key3 Long Pressed, cnt: %bu\n", keys[2].pressDuration);
+    }
+    else if (index == 3)
+    {
+        printf("Key4 Long Pressed, cnt: %bu\n", keys[3].pressDuration);
+    }
+}
+
 void main()
 {
-    u32 xdata sysT0Tick = 0;
+    u32 xdata sysRtcPrintf = 0;
     App_Init();
     EA = 1;
+    printf("Starting Config Done!\n");
 
-    printf("Init OK\r\n");
     while (1)
     {
-        delay_ms(1);
-        if (time0IntNum - sysT0Tick >= 200)
+        if (time0IntNum - sysRtcPrintf >= 100)
         {
-            sysT0Tick = time0IntNum;
-
-            if (KT_READ_DONE_FLAG)
-            {
-                KT_READ_DONE_FLAG = FALSE;
-                if (TouchKey_IsAnyPressed())
-                {
-                    if (touchKeyStatus >> 7 & 0x0001)
-                    {
-                        printf("1\n");
-                    }
-                    else
-                    {
-                        printf("0\n");
-                    }
-                }
-                else
-                {
-                    printf("0\n");
-                }
-                // printf("TK_cnt1 = %d \r\n", TK_DAT_BUFF[1]);
-                // printf("TK_cnt7 = %u \r\n", TK_DAT_BUFF[7]);
-                // printf("TK_cnt8 = %d \r\n", TK_DAT_BUFF[8]);
-                // printf("TK_cnt9 = %d \r\n", TK_DAT_BUFF[9]);
-            }
+            sysRtcPrintf = time0IntNum;
+            Key_Event(0, onShortPress, onLongPress);
         }
     }
 }

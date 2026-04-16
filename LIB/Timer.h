@@ -8,6 +8,8 @@
 /**
  * @brief Timer configuration function,
  *  Desired interrupt time = (65536 - thtl) * prescaler * clkSource / 24M
+ *  This function does not extend the register access.
+ *
  * @param timer: Timer port (Timer0, Timer1, ... Timer4)
  * @param mode: Timer mode, can be one of the following:
  * TIM_16BitAutoReload
@@ -30,5 +32,11 @@
 //
 void Timer_Config(u8 timer, u8 mode, u8 clkSource, bit clkOut, u32 thtl,
                   bit run, u8 prescaler, u8 priority);
+
+/**
+ * @brief  Common timer configuration function for the application. Enables
+ * Timer0 with predefined settings for 1ms interrupts.
+ */
+void Timer_Config_t0_1ms();
 
 #endif  // __TIMER_H__

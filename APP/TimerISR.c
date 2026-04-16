@@ -1,3 +1,4 @@
+#include "Key.h"
 #include "STC8G_H_Timer.h"
 
 u32 xdata time0IntNum = 0;
@@ -5,9 +6,9 @@ u32 xdata time0IntNum = 0;
 void Timer0_ISR_Handler(void) interrupt TMR0_VECTOR
 {
     time0IntNum++;
-    if (time0IntNum % 10 == 0)
+    if (time0IntNum % 100 == 0)
     {
-        TSCTRL = (1 << 7) | (1 << 6);
+        Key_Scan();  // scan keys every 100ms
     }
 }
 
